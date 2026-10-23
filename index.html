@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="TRAP ZONE: freestyle, batallas de rimas, frases urbanas y nombres artísticos.">
+  <title>TRAP ZONE | Cultura Urbana</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="#" class="logo">TRAP<span>ZONE</span></a>
+    <span class="live"><i></i> CULTURA URBANA</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">TU BARRIO · TU VOZ · TU ESTILO</p>
+        <h1>EL BARRIO<br>TIENE <span>VOZ.</span></h1>
+        <p class="intro">
+          Improvisa, crea tus barras y demuestra lo que llevas dentro.
+          Aquí comienza tu siguiente movimiento.
+        </p>
+        <button class="primary-btn" onclick="irA('herramientas')">
+          ENTRAR AL JUEGO ↘
+        </button>
+      </div>
+      <div class="hero-art">
+        <div class="circle circle-one"></div>
+        <div class="circle circle-two"></div>
+        <div class="mic">🎤</div>
+        <div class="art-label">NO RULES.<br>JUST FLOW.</div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><strong>01</strong><span>IMPROVISA</span></div>
+      <div><strong>02</strong><span>CREA</span></div>
+      <div><strong>03</strong><span>COMPARTE</span></div>
+    </section>
+
+    <section id="herramientas" class="tools-section">
+      <div class="section-heading">
+        <p class="eyebrow">TU PRÓXIMA JUGADA</p>
+        <h2>ENTRA EN <span>ACCIÓN</span></h2>
+        <p>Elige tu herramienta y suelta la creatividad.</p>
+      </div>
+
+      <div class="tools-grid">
+        <article class="tool-card">
+          <div class="tool-icon">🎤</div>
+          <span class="tag">01 / FREESTYLE</span>
+          <h3>Reto de barras</h3>
+          <p>Recibe una palabra y crea cuatro líneas improvisadas.</p>
+          <button onclick="nuevoReto()">LANZAR RETO ↗</button>
+        </article>
+
+        <article class="tool-card">
+          <div class="tool-icon">🔥</div>
+          <span class="tag">02 / FRASES</span>
+          <h3>Frases urbanas</h3>
+          <p>Inspiración sobre lealtad, barrio y superación.</p>
+          <button onclick="nuevaFrase()">GENERAR FRASE ↗</button>
+        </article>
+
+        <article class="tool-card">
+          <div class="tool-icon">🎭</div>
+          <span class="tag">03 / IDENTIDAD</span>
+          <h3>Nombre artístico</h3>
+          <p>Encuentra un nombre para tu personaje musical.</p>
+          <button onclick="nuevoNombre()">CREAR NOMBRE ↗</button>
+        </article>
+
+        <article class="tool-card">
+          <div class="tool-icon">⚔️</div>
+          <span class="tag">04 / BATALLA</span>
+          <h3>Duelo de rimas</h3>
+          <p>Obtén un tema y reta a tus amigos a improvisar.</p>
+          <button onclick="nuevaBatalla()">INICIAR DUELO ↗</button>
+        </article>
+      </div>
+
+      <div id="resultado" class="result" aria-live="polite">
+        <span class="result-tag">TU ZONA CREATIVA</span>
+        <p id="resultText">Selecciona una herramienta para comenzar.</p>
+        <button id="shareBtn" class="share-btn" onclick="compartir()">
+          COMPARTIR ↗
+        </button>
+      </div>
+    </section>
+
+    <section class="write-section">
+      <p class="eyebrow">TU TURNO</p>
+      <h2>ESCRIBE TUS <span>BARRAS.</span></h2>
+      <p>Usa este espacio para escribir tus propias rimas.</p>
+      <textarea id="misBarras" maxlength="1500"
+        placeholder="Mi barrio, mis sueños, mi historia..."></textarea>
+      <div class="write-actions">
+        <span id="contador">0 / 1500</span>
+        <button class="primary-btn" onclick="compartirBarras()">
+          COMPARTIR MIS BARRAS ↗
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#" class="logo">TRAP<span>ZONE</span></a>
+    <p>Una plataforma para crear, improvisar y compartir.</p>
+    <small>© 2026 TRAP ZONE · CREATIVIDAD URBANA</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
